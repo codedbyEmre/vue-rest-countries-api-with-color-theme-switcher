@@ -1,0 +1,89 @@
+@import 'configs';
+
+*{
+    font-family: $Nunito;
+}
+
+%transition{
+    transition: 0.3s ease all;
+}
+
+body{
+    background: $VeryLightGrayLightModeBackground;
+    color: $VeryDarkBlueLightModeText;
+    font-size: $HomepageItems;
+    overflow-x: hidden;
+    @extend %transition;
+    header{
+        background-color: #fff;
+        @extend %transition;
+    }
+    .form-select{
+        background-color: #fff;
+        @extend %transition;
+    }
+    .form-control,.input-group-text{
+        background-color: #fff;
+        @extend %transition;
+    }
+    .card{
+        width: 18rem;
+        cursor: pointer;
+        @extend %transition;
+        img{
+            height: 12rem;
+        }
+        &:hover{
+            transform: translateY(-0.75rem);
+            border: 1px solid rgba(0,0,0,0.25);
+        }
+        .country-link{
+            text-decoration: none;
+            color: $VeryDarkBlueLightModeText;
+        }
+    }
+    .country-detail{
+        font-size: $DetailPage;
+    }
+
+
+
+    &.dark{
+        background-color: $VeryDarkBlueDarkModeBackground;
+        header{
+            background-color: $DarkBlueDarkModeElements;
+            color: $VeryLightGrayLightModeBackground;
+        }
+        .form-select{
+            background-color: $DarkBlueDarkModeElements;
+            color: #fff;
+            border: 1px solid $DarkBlueDarkModeElements;
+        }
+        .form-control,.input-group-text{
+            background-color: $DarkBlueDarkModeElements;
+            color: #fff;
+            border: 1px solid $DarkBlueDarkModeElements;
+            &::placeholder{
+                color: #fff;
+            }
+        }
+        .card{
+            background-color: $DarkBlueDarkModeElements;
+            color: #fff;
+            .country-link{
+                color: $VeryLightGrayLightModeBackground;
+            }
+        }
+        .country-detail{
+            color: #fff;
+            .country-link{
+                color: $VeryLightGrayLightModeBackground;
+            }
+        }
+        
+    }
+    
+}
+
+
+

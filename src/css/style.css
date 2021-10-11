@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body, body header, body .form-select, body .form-control, body .input-group-text, body .card {
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+body {
+  background: #fafafa;
+  color: #111517;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+body header {
+  background-color: #fff;
+}
+
+body .form-select {
+  background-color: #fff;
+}
+
+body .form-control, body .input-group-text {
+  background-color: #fff;
+}
+
+body .card {
+  width: 18rem;
+  cursor: pointer;
+}
+
+body .card img {
+  height: 12rem;
+}
+
+body .card:hover {
+  -webkit-transform: translateY(-0.75rem);
+          transform: translateY(-0.75rem);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+body .card .country-link {
+  text-decoration: none;
+  color: #111517;
+}
+
+body .country-detail {
+  font-size: 16px;
+}
+
+body.dark {
+  background-color: #202c37;
+}
+
+body.dark header {
+  background-color: #2b3945;
+  color: #fafafa;
+}
+
+body.dark .form-select {
+  background-color: #2b3945;
+  color: #fff;
+  border: 1px solid #2b3945;
+}
+
+body.dark .form-control, body.dark .input-group-text {
+  background-color: #2b3945;
+  color: #fff;
+  border: 1px solid #2b3945;
+}
+
+body.dark .form-control::-webkit-input-placeholder, body.dark .input-group-text::-webkit-input-placeholder {
+  color: #fff;
+}
+
+body.dark .form-control:-ms-input-placeholder, body.dark .input-group-text:-ms-input-placeholder {
+  color: #fff;
+}
+
+body.dark .form-control::-ms-input-placeholder, body.dark .input-group-text::-ms-input-placeholder {
+  color: #fff;
+}
+
+body.dark .form-control::placeholder, body.dark .input-group-text::placeholder {
+  color: #fff;
+}
+
+body.dark .card {
+  background-color: #2b3945;
+  color: #fff;
+}
+
+body.dark .card .country-link {
+  color: #fafafa;
+}
+
+body.dark .country-detail {
+  color: #fff;
+}
+
+body.dark .country-detail .country-link {
+  color: #fafafa;
+}

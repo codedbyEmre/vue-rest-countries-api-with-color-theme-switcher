@@ -7,7 +7,12 @@
         Back
       </button>
     </router-link>
-    <div class="row">
+    <div v-if="isLoading" class="container-md mt-5 text-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div v-else class="row">
       <div class="col-lg-6 py-2">
         <img :src="country.flags.png" :alt="country.name.common" class="img-fluid w-100 h-100">
       </div>
@@ -69,14 +74,16 @@ export default {
   name: "CountryDetail",
   data(){
     return{
-      country: null
+      country: null,
+      isLoading: false
     }
   },
   methods:{
     async getCountries(){
+      this.isLoading = true
       const res = await fetch(`https://restcountries.com/v3.1/all`)
       const data = await res.json()
-      
+      this.isLoading = false
       data.filter(item => {
         if(this.$route.params.name === item.name.common){
           this.country = item;
@@ -104,5 +111,4 @@ export default {
 </script>
 
 <style>
-
 </style>

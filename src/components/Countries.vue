@@ -20,7 +20,13 @@
         </div>
     </div>
   </div>
-  <div class="container-md mt-5 d-flex flex-wrap justify-content-sm-between justify-content-center">
+  
+  <div v-if="isLoading" class="container-md mt-5 text-center">
+    <div class="spinner-border mt-5" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div v-else class="container-md mt-5 d-flex flex-wrap justify-content-sm-between justify-content-center">
       <div class="card shadow-sm mb-5 pb-3 mx-md-0 mx-3" v-for="(country,index) in countries" :key="index">
         <router-link :to="'/country/' + country.name.common" class="country-link">
             <img :src="country.flags.png" class="card-img-top" :alt="country.name.common">
@@ -40,6 +46,7 @@ export default {
     name: "Countries",
     data(){
         return{
+            isLoading: false,
             countries: [],
             regions: ['asia', 'africa', 'americas', 'europe', 'antarctic', 'oceania'],
             filter: "",
@@ -48,9 +55,10 @@ export default {
     },
     methods:{
         async getCountries(){
+            this.isLoading = true
             const res = await fetch(`https://restcountries.com/v3.1/all`)
             const data = await res.json()
-            console.log(data);
+            this.isLoading = false
             this.countries = data
         },
         formatCapital(capital){

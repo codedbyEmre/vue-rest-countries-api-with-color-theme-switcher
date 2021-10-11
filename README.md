@@ -1,3 +1,5 @@
+A country finder app that filters,lists and searches countries.It was created with Vue3,Vue Router,Bootstrap5 and Scss.
+
 # Frontend Mentor - REST Countries API with color theme switcher
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)

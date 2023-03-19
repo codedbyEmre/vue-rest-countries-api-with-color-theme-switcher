@@ -1,4 +1,11 @@
-A country finder app that filters,lists and searches countries.It was created with Vue,Vue Router,Bootstrap5 and Scss.
+## Stacks
+```
+Vue 3
+Options Api
+Vue Router 4
+Vuex 4
+Bootstrap 5
+```
 
 # Frontend Mentor - REST Countries API with color theme switcher
 

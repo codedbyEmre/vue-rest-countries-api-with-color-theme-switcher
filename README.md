@@ -3,7 +3,6 @@
 Vue 3
 Options Api
 Vue Router 4
-Vuex 4
 Bootstrap 5
 ```
 
